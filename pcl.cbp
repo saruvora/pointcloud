@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="pcl" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/pcl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="../../../../../../usr/include/eigen3" />
+					<Add directory="../../../../../../usr/include/pcl-1.7" />
+					<Add directory="../../../../../../usr/include/pcl-1.7/pcl/surface" />
+					<Add directory="../../../../../../usr/include/vtk-5.8" />
+				</Compiler>
+				<Linker>
+					<Add library="/usr/lib/libvtk*" />
+					<Add library="/usr/lib/libpcl*" />
+					<Add library="../../../../../../usr/lib/x86_64-linux-gnu/libboost_filesystem.so" />
+					<Add library="../../../../../../usr/lib/x86_64-linux-gnu/libboost_iostreams.so" />
+					<Add library="../../../../../../usr/lib/x86_64-linux-gnu/libboost_system.so" />
+					<Add library="../../../../../../usr/lib/x86_64-linux-gnu/libboost_thread.so" />
+					<Add library="../../../../../../lib/x86_64-linux-gnu/libpthread-2.19.so" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/pcl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
